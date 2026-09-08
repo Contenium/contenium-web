@@ -4,113 +4,274 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contenium Solutions</title>
+
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-    background: #0078d4;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+body{
+    font-family:'Segoe UI',sans-serif;
+    color:#333;
+    line-height:1.6;
 }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
+nav{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
 }
 
-.card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+.logo{
+    height:75px;
 }
 
-footer {
-    background: #f5f5f5;
-    text-align: center;
-    padding: 20px;
+.menu a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#003366;
+    font-weight:600;
 }
 
-.button {
-    background: #0078d4;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(
+        rgba(0,51,102,0.75),
+        rgba(0,51,102,0.75)
+    ),
+    url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
 }
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0078d4;
+    color:white;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:6px;
+    margin:10px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#005ea8;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#003366;
+    margin-bottom:50px;
+    font-size:2.5rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    color:#0078d4;
+    margin-bottom:15px;
+}
+
+.education{
+    background:#f5f9fd;
+}
+
+.contact{
+    background:#003366;
+    color:white;
+    text-align:center;
+}
+
+footer{
+    background:#001c33;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
 </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Contenium Solutions</h1>
-    <p>Microsoft 365, SharePoint, Power Platform and Business Solutions</p>
+<nav>
+<div class="nav-container">
+
+images/CS_Logo1f.png
+
+<div class="menu">
+#platformsPlatforms</a>
+#servicesServices</a>
+<a hreftContact</a>
+</div>
+
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<h1>Transforming Education Through Technology</h1>
+
+<p>
+Supporting schools and organisations with innovative solutions for
+Student Wellbeing, Learning Support, Microsoft 365,
+SharePoint, Power Platform and Business Intelligence.
+</p>
+
+#contactContact Us</a>
+#Client Portal</a>
+
+</div>
+
 </header>
 
-<section>
-    <h2>About Us</h2>
-    <p>
-        Contenium Solutions helps organisations modernise and streamline
-        business processes using Microsoft 365, SharePoint, Power Apps,
-        Power Automate and Power BI.
-    </p>
+<section id="platforms" class="education">
+
+<div class="container">
+
+<h2 class="section-title">Education Platforms</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Student Wellbeing Platform</h3>
+
+<p>
+A purpose-built wellbeing and case management platform for schools.
+Track student wellbeing, interventions, incidents, communications,
+actions and outcomes through a secure Microsoft-based solution.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Learning Support Platform</h3>
+
+<p>
+Manage learning plans, classroom adjustments, accommodations,
+teacher collaboration, parent engagement and compliance reporting
+through a dedicated learning support solution.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">Microsoft Solutions</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Microsoft 365</h3>
+<p>Collaboration, productivity and modern workplace solutions.</p>
+</div>
+
+<div class="card">
+<h3>SharePoint Solutions</h3>
+<p>Intranets, document management and workflow automation.</p>
+</div>
+
+<div class="card">
+<h3>Power Platform</h3>
+<p>Power Apps, Power Automate and low-code business solutions.</p>
+</div>
+
+<div class="card">
+<h3>Power BI Analytics</h3>
+<p>Executive dashboards, reporting and business intelligence.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section>
-    <h2>Our Services</h2>
 
-    <div class="services">
+<div class="container">
 
-        <div class="card">
-            <h3>SharePoint Solutions</h3>
-            <p>Intranets, document management and workflow automation.</p>
-        </div>
+<h2 class="section-title">Why Contenium?</h2>
 
-        <div class="card">
-            <h3>Power Apps Development</h3>
-            <p>Custom business applications tailored to your needs.</p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <h3>Power BI Analytics</h3>
-            <p>Dashboards, reporting and business intelligence solutions.</p>
-        </div>
+<div class="card">
+<h3>Education Expertise</h3>
+<p>Specialised platforms designed specifically for schools.</p>
+</div>
 
-        <div class="card">
-            <h3>Student Wellbeing Systems</h3>
-            <p>Solutions designed to support education and wellbeing services.</p>
-        </div>
+<div class="card">
+<h3>Microsoft Specialists</h3>
+<p>Built on proven Microsoft technologies and cloud services.</p>
+</div>
 
-    </div>
-</section>
-
-<section>
-    <h2>Client Portal</h2>
-    <p>
-        Secure access to client resources, support information and Microsoft 365 services.
-    </p>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: info@contenium.com.au</p>
-    <p>Perth, Western Australia</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Contenium Solutions</p>
-</footer>
-
-</body>
-</html>
+<div class="card">
+<h3>Custom Solutions</h3>
+<p
