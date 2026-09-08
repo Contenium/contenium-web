@@ -61,15 +61,30 @@ header{
 
 .platform{
     flex:1;
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:all .3s ease;
 }
 
+.platform:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.12);
+}
 .platform h3{
-    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
     color:#003366;
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+
+.platform h3 img{
+    height:36px;
+    width:auto;
+    display:block;
 }
 
 
@@ -121,7 +136,7 @@ footer{
 
 <div class="platform">
 
-        <h3> <img src="images/LeAP_Logo1.png" alt="LeAP" style="height:32px;"> Larnign Support Platform </h3>
+        <h3> <img src="images/LeAP_Logo1.png" alt="LeAP" style="height:32px;"> Learning Support Platform </h3>
         <p>
             Manage learning plans, adjustments, support requirements, parent engagement and compliance reporting through a dedicated learning support solution.
         </p>
