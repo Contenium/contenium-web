@@ -6,7 +6,6 @@
 <title>Contenium Solutions</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -20,78 +19,77 @@ body{
 }
 
 nav{
-    background:white;
-    position:sticky;
+    position:fixed;
     top:0;
+    width:100%;
+    background:white;
     z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 .nav-container{
     max-width:1200px;
     margin:auto;
+    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;
 }
 
 .logo{
-    height:75px;
+    height:70px;
 }
 
 .menu a{
-    margin-left:25px;
     text-decoration:none;
     color:#003366;
+    margin-left:20px;
     font-weight:600;
 }
 
 .hero{
-    min-height:90vh;
+    min-height:100vh;
     background:
-    linear-gradient(
-        rgba(0,51,102,0.75),
-        rgba(0,51,102,0.75)
-    ),
-    url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80');
+    linear-gradient(rgba(0,51,102,.75),
+    rgba(0,51,102,.75)),
+    url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=80');
     background-size:cover;
     background-position:center;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
     color:white;
-    padding:40px;
+    padding:120px 20px 40px 20px;
 }
 
 .hero-content{
     max-width:900px;
 }
 
-.hero-content h1{
-    font-size:3.5rem;
+.hero h1{
+    font-size:4rem;
     margin-bottom:20px;
 }
 
-.hero-content p{
+.hero p{
     font-size:1.3rem;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 .btn{
     display:inline-block;
     background:#0078d4;
     color:white;
-    padding:14px 28px;
-    text-decoration:none;
+    padding:14px 30px;
     border-radius:6px;
+    text-decoration:none;
     margin:10px;
-    font-weight:600;
+    font-weight:bold;
 }
 
 .btn:hover{
-    background:#005ea8;
+    background:#005ea6;
 }
 
 section{
@@ -105,31 +103,31 @@ section{
 
 .section-title{
     text-align:center;
+    margin-bottom:40px;
     color:#003366;
-    margin-bottom:50px;
     font-size:2.5rem;
 }
 
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+    gap:25px;
 }
 
 .card{
     background:white;
-    border-radius:12px;
     padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .card h3{
     color:#0078d4;
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .education{
-    background:#f5f9fd;
+    background:#f7fbff;
 }
 
 .contact{
@@ -138,14 +136,34 @@ section{
     text-align:center;
 }
 
+.contact a{
+    color:white;
+}
+
 footer{
-    background:#001c33;
+    background:#001a33;
     color:white;
     text-align:center;
     padding:20px;
 }
 
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.nav-container{
+    flex-direction:column;
+}
+
+.menu{
+    margin-top:15px;
+}
+
+}
 </style>
+
 </head>
 
 <body>
@@ -153,12 +171,12 @@ footer{
 <nav>
 <div class="nav-container">
 
-images/CS_Logo1f.png
+<img src="images.png
 
 <div class="menu">
 #platformsPlatforms</a>
-#servicesServices</a>
-<a hreftContact</a>
+<a href="#services">>
+#contactContact</a>
 </div>
 
 </div>
@@ -171,13 +189,11 @@ images/CS_Logo1f.png
 <h1>Transforming Education Through Technology</h1>
 
 <p>
-Supporting schools and organisations with innovative solutions for
-Student Wellbeing, Learning Support, Microsoft 365,
-SharePoint, Power Platform and Business Intelligence.
+Supporting schools with innovative Student Wellbeing and Learning Support
+platforms, powered by Microsoft 365, SharePoint, Power Platform and Power BI.
 </p>
 
 #contactContact Us</a>
-#Client Portal</a>
 
 </div>
 
@@ -193,25 +209,20 @@ SharePoint, Power Platform and Business Intelligence.
 
 <div class="card">
 <h3>Student Wellbeing Platform</h3>
-
 <p>
-A purpose-built wellbeing and case management platform for schools.
-Track student wellbeing, interventions, incidents, communications,
-actions and outcomes through a secure Microsoft-based solution.
+A purpose-built wellbeing and case management platform helping schools
+manage student welfare, interventions, incidents, communications and
+outcomes in a secure Microsoft environment.
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Learning Support Platform</h3>
-
 <p>
-Manage learning plans, classroom adjustments, accommodations,
-teacher collaboration, parent engagement and compliance reporting
-through a dedicated learning support solution.
+Manage individual learning plans, classroom adjustments, support
+requirements, parent engagement and compliance reporting in one central
+solution.
 </p>
-
 </div>
 
 </div>
@@ -230,22 +241,22 @@ through a dedicated learning support solution.
 
 <div class="card">
 <h3>Microsoft 365</h3>
-<p>Collaboration, productivity and modern workplace solutions.</p>
+<p>Modern workplace and collaboration solutions.</p>
 </div>
 
 <div class="card">
-<h3>SharePoint Solutions</h3>
+<h3>SharePoint</h3>
 <p>Intranets, document management and workflow automation.</p>
 </div>
 
 <div class="card">
 <h3>Power Platform</h3>
-<p>Power Apps, Power Automate and low-code business solutions.</p>
+<p>Power Apps, Power Automate and business solutions.</p>
 </div>
 
 <div class="card">
-<h3>Power BI Analytics</h3>
-<p>Executive dashboards, reporting and business intelligence.</p>
+<h3>Power BI</h3>
+<p>Dashboards, reporting and business intelligence.</p>
 </div>
 
 </div>
@@ -264,14 +275,52 @@ through a dedicated learning support solution.
 
 <div class="card">
 <h3>Education Expertise</h3>
-<p>Specialised platforms designed specifically for schools.</p>
+<p>Solutions specifically designed for schools and education providers.</p>
 </div>
 
 <div class="card">
 <h3>Microsoft Specialists</h3>
-<p>Built on proven Microsoft technologies and cloud services.</p>
+<p>Built on Microsoft's trusted cloud and productivity platforms.</p>
 </div>
 
 <div class="card">
-<h3>Custom Solutions</h3>
-<p
+<h3>Custom Development</h3>
+<p>Tailored systems that fit your organisation's unique requirements.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<br>
+
+<p><strong>Serge Conte</strong></p>
+
+<p>
+<a href="mailto:serge.conte@contenium.com.au">
+serge.conte@contenium.com.au
+</a>
+</p>
+
+<p>0408 093 964</p>
+
+<p>Perth, Western Australia</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Contenium Solutions</p>
+</footer>
+
+</body>
+</html>
