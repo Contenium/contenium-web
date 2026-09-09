@@ -1,155 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contenium Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+    <meta name="description" content="Contenium Solutions provides innovative student wellbeing and learning support platforms for schools.">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <title>Contenium Solutions</title>
 
-body{
-    font-family:Segoe UI, Arial, sans-serif;
-    color:#333;
-    line-height:1.6;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header{
-    background:#ffffff;
-    padding:12px 30px;
-    border-bottom:1px solid #ddd;
-}
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f7f9fc;
+        }
 
-.logo{
-    height:60px;
-}
+        header {
+            background: #ffffff;
+            padding: 12px 30px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.hero{
-    background:#003366;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
+        .logo {
+            height: 60px;
+            width: auto;
+        }
 
-.hero h1{
-    font-size:3rem;
-    margin-bottom:20px;
-}
+        nav a {
+            color: #003366;
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: 600;
+        }
 
-.hero p{
-    max-width:800px;
-    margin:auto;
-    font-size:1.2rem;
-}
+        nav a:hover {
+            color: #0077b6;
+        }
 
-.container{
-    max-width:1400px;
-    margin:auto;
-    padding:60px 20px;
-}
-    
-.platforms{
-    display:flex;
-    gap:30px;
-    margin-top:30px;
-}
+        .hero {
+            background: linear-gradient(
+                rgba(0, 51, 102, 0.95),
+                rgba(0, 51, 102, 0.95)
+            );
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-.platform{
-    flex:1;
-    background:#fff;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:all .3s ease;
-}
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+        }
 
-.platform:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 24px rgba(0,0,0,0.12);
-}
-.platform h3{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    color:#003366;
-    margin-bottom:15px;
-    font-size:1.4rem;
-}
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.2rem;
+        }
 
-.platform h3 img{
-    height:36px;
-    width:auto;
-    display:block;
-}
+        .button {
+            display: inline-block;
+            background: #ffffff;
+            color: #003366;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
 
+        .button:hover {
+            background: #0077b6;
+            color: #ffffff;
+        }
 
-footer{
-    background:#003366;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 60px 20px;
+        }
 
-</style>
+        .container h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
 
+        .platforms {
+            display: flex;
+            gap: 30px;
+        }
+
+        .platform {
+            flex: 1;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .platform:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .platform h3 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .platform-logo {
+            height: 36px;
+            width: auto;
+            display: block;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.95rem;
+            }
+
+            .platforms {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+    <header>
+        <a href="#">
+            <img
+                src="images/CS_Logo1f.png"
+                alt="Contenium Solutions logo"
+                class="logo">
+        </a>
 
-    <img
-        src="images/CS_Logo1f.png"
-        alt="Contenium Solutions"
-        class="logo">
-    
-</header>
+        <nav aria-label="Main navigation">
+            <a href="#platforms">Platforms</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<section class="hero">
+    <main>
+        <section class="hero">
+            <h1>Transforming Education Through Technology</h1>
 
-    <h1>Transforming Education Through Technology</h1>
+            <p>
+                Empowering schools with innovative Student Wellbeing and Learning Support platforms built on Microsoft technologies.
+            </p>
 
-    <p>
-        Empowering schools with innovative Student Wellbeing and Learning Support platforms built on Microsoft technologies.
-    </p>
+            <a href="#platforms" class="button">Explore Our Platforms</a>
+        </section>
 
-</section>
-    
-<div class="container">
+        <section class="container" id="platforms">
+            <h2>Our Education Platforms</h2>
 
-<h2>Our Education Platforms</h2>
+            <div class="platforms">
+                <article class="platform">
+                    <h3>
+                        <img
+                            src="images/SWIM_Logo2.png"
+                            alt="SWIM logo"
+                            class="platform-logo">
 
-<div class="platforms">
-<div class="platform">
+                        <span>Student Wellbeing Platform</span>
+                    </h3>
 
-    <h3>  <img src="images/SWIM_Logo2.png" alt="SWIM" style="height:32px;"> Student Wellbeing Platform </h3>
-    <p>
-        A purpose-built wellbeing and case management platform helping schools manage student welfare, interventions, incidents, communications and reporting.
-    </p>
+                    <p>
+                        A purpose-built wellbeing and case management platform helping schools manage student welfare, interventions, incidents, communications and reporting.
+                    </p>
+                </article>
 
-</div>
+                <article class="platform">
+                    <h3>
+                        <img
+                            src="images/LeAP_Logo1.png"
+                            alt="LeAP logo"
+                            class="platform-logo">
 
-<div class="platform">
+                        <span>Learning Support Platform</span>
+                    </h3>
 
-        <h3> <img src="images/LeAP_Logo1.png" alt="LeAP" style="height:32px;"> Learning Support Platform </h3>
-        <p>
-            Manage learning plans, adjustments, support requirements, parent engagement and compliance reporting through a dedicated learning support solution.
-        </p>
-</div>
-</div>
-</div>
+                    <p>
+                        Manage learning plans, adjustments, support requirements, parent engagement and compliance reporting through a dedicated learning support solution.
+                    </p>
+                </article>
+            </div>
+        </section>
 
+        <section class="container" id="contact">
+            <h2>Get in Touch</h2>
 
-<footer>
+            <p style="text-align: center;">
+                Contact Contenium Solutions to learn how our platforms can support your school.
+            </p>
+        </section>
+    </main>
 
-    © 2026 Contenium Solutions
-
-</footer>
+    <footer>
+        <p>&copy; 2026 Contenium Solutions. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
