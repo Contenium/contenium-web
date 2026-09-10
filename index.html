@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Contenium Solutions provides innovative student wellbeing and learning support platforms for schools.">
+    <meta name="description" content="Contenium Solutions helps businesses and schools unlock the full value of their existing Microsoft technologies through optimisation, automation, and purpose-built platforms.">
 
     <title>Contenium Solutions</title>
 
@@ -48,13 +48,45 @@
         }
 
         .hero {
-            background: linear-gradient(
-                rgba(0, 51, 102, 0.95),
-                rgba(0, 51, 102, 0.95)
-            );
+            position: relative;
+            overflow: hidden;
+            background: #003366;
             color: white;
             text-align: center;
             padding: 80px 20px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image: url("images/HeroBanner.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(0, 20, 40, 0.45),
+                rgba(0, 20, 40, 0.55)
+            );
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero .tagline {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #7fd1ff;
+            margin-bottom: 16px;
         }
 
         .hero h1 {
@@ -97,6 +129,117 @@
             font-size: 2rem;
         }
 
+        .section-intro {
+            max-width: 800px;
+            margin: -10px auto 40px;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .service {
+            flex: 1;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .sub-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .sub-box {
+            background: #f7f9fc;
+            border: 1px solid #e0e6ed;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .sub-box .sub-box-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+
+        .sub-box-logo {
+            height: 28px;
+            width: auto;
+            display: block;
+        }
+
+        .sub-box h4 {
+            color: #003366;
+            font-size: 1.05rem;
+            margin-bottom: 2px;
+        }
+
+        .sub-box .sub-abbr {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0077b6;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .sub-box p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .service h3 {
+            color: #003366;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .service ul {
+            margin: 16px 0 20px 20px;
+        }
+
+        .service ul li {
+            margin-bottom: 6px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .tech-tags span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #eaf2fb;
+            color: #003366;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 12px 6px 6px;
+            border-radius: 20px;
+        }
+
+        .app-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        /* Platforms */
         .platforms {
             display: flex;
             gap: 30px;
@@ -121,8 +264,16 @@
             align-items: center;
             gap: 15px;
             color: #003366;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
             font-size: 1.4rem;
+        }
+
+        .platform .platform-abbr {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #0077b6;
+            margin-bottom: 15px;
         }
 
         .platform-logo {
@@ -149,7 +300,9 @@
                 font-size: 0.95rem;
             }
 
-            .platforms {
+            .platforms,
+            .services,
+            .sub-boxes {
                 flex-direction: column;
             }
 
@@ -171,54 +324,91 @@
         </a>
 
         <nav aria-label="Main navigation">
-            <a href="#platforms">Platforms</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Transforming Education Through Technology</h1>
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+
+            <h1>Unlock the Power of Your Existing Microsoft Technologies</h1>
 
             <p>
-                Empowering schools with innovative Student Wellbeing and Learning Support platforms built on Microsoft technologies.
+                Many organisations already own powerful Microsoft technologies that can improve efficiency, collaboration, and reporting — but aren't fully leveraging their capabilities. Contenium Solutions helps businesses and schools maximise the value of these existing investments.
             </p>
 
-            <a href="#platforms" class="button">Explore Our Platforms</a>
+            <a href="#services" class="button">Explore Our Services</a>
         </section>
 
-        <section class="container" id="platforms">
-            <h2>Our Education Platforms</h2>
+        <section class="container" id="services">
+            <h2>Our Services</h2>
+            <p class="section-intro">
+                Contenium Solutions helps organisations unlock greater value from their Microsoft technology investments through process improvement, workflow automation, and purpose-built digital solutions.
+            </p>
 
-            <div class="platforms">
-                <article class="platform">
-                    <h3>
-                        <img
-                            src="images/SWIM_Logo2.png"
-                            alt="SWIM logo"
-                            class="platform-logo">
+            <div class="services">
+                <article class="service">
+                    <h3>Microsoft 365 Optimisation &amp; Solutions</h3>
+                    <p><strong>We help organisations:</strong></p>
 
-                        <span>Student Wellbeing Platform</span>
-                    </h3>
+                    <ul>
+                        <li>Modern intranets and staff portals</li>
+                        <li>Centralised document libraries and information management</li>
+                        <li>Streamlined operational processes and workflows</li>
+                        <li>Automation of repetitive and manual tasks</li>
+                        <li>Improved collaboration across teams and departments</li>
+                        <li>Reporting, dashboards, and business intelligence</li>
+                        <li>Visibility, accountability, and compliance</li>
+                    </ul>
 
-                    <p>
-                        A purpose-built wellbeing and case management platform helping schools manage student welfare, interventions, incidents, communications and reporting.
-                    </p>
+                    <p><strong>Our expertise includes:</strong></p>
+                    <div class="tech-tags">
+                        <span><img src="images/teams.png" alt="Teams logo" class="app-icon">Teams</span>
+                        <span><img src="images/sharepoint.png" alt="SharePoint logo" class="app-icon">SharePoint</span>
+                        <span><img src="images/power-automate.png" alt="Power Automate logo" class="app-icon">Power Automate</span>
+                        <span><img src="images/power-apps.png" alt="Power Apps logo" class="app-icon">Power Apps</span>
+                        <span><img src="images/lists.png" alt="Lists logo" class="app-icon">Lists</span>
+                        <span><img src="images/forms.png" alt="Forms logo" class="app-icon">Forms</span>
+                        <span><img src="images/planner.png" alt="Planner logo" class="app-icon">Planner</span>
+                        <span><img src="images/power-bi.png" alt="Power BI logo" class="app-icon">Power BI</span>
+                        <span><img src="images/onedrive.png" alt="OneDrive logo" class="app-icon">OneDrive</span>
+                        <span><img src="images/outlook.png" alt="Outlook logo" class="app-icon">Outlook</span>
+                        <span><img src="images/excel.png" alt="Excel logo" class="app-icon">Excel</span>
+                        <span><img src="images/word.png" alt="Word logo" class="app-icon">Word</span>
+                        <span><img src="images/loop.png" alt="Loop logo" class="app-icon">Loop</span>
+                        <span><img src="images/bookings.png" alt="Bookings logo" class="app-icon">Bookings</span>
+                        <span><img src="images/stream.png" alt="Stream logo" class="app-icon">Stream</span>
+                    </div>
                 </article>
 
-                <article class="platform">
-                    <h3>
-                        <img
-                            src="images/LeAP_Logo1.png"
-                            alt="LeAP logo"
-                            class="platform-logo">
-
-                        <span>Learning Support Platform</span>
-                    </h3>
-
+                <article class="service">
+                    <h3>Education Platforms</h3>
                     <p>
-                        Manage learning plans, adjustments, support requirements, parent engagement and compliance reporting through a dedicated learning support solution.
+                        Contenium Solutions has developed specialised platforms designed specifically for schools, built on Microsoft technologies and shaped by real-world educational requirements.
                     </p>
+
+                    <div class="sub-boxes">
+                        <div class="sub-box">
+                            <div class="sub-box-header">
+                                <img src="images/SWIM_Logo2.png" alt="SWIM logo" class="sub-box-logo">
+                                <h4>Student Wellbeing Information Manager</h4>
+                            </div>
+                            <span class="sub-abbr">SWIM</span>
+                            <p>Manages student welfare, interventions, incidents, communications, and reporting in one secure environment.</p>
+                        </div>
+
+                        <div class="sub-box">
+                            <div class="sub-box-header">
+                                <img src="images/LeAP_Logo1.png" alt="LeAP logo" class="sub-box-logo">
+                                <h4>Learning Assistance Platform</h4>
+                            </div>
+                            <span class="sub-abbr">LeAP</span>
+                            <p>Manages learning plans, adjustments, accommodations, parent engagement, and compliance reporting.</p>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
@@ -227,7 +417,7 @@
             <h2>Get in Touch</h2>
 
             <p style="text-align: center;">
-                Contact Contenium Solutions to learn how our platforms can support your school.
+                Contact Contenium Solutions to learn how our services and platforms can support your business or school.
             </p>
         </section>
     </main>
