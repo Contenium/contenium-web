@@ -205,6 +205,7 @@
             width: 32px;
             display: block;
             flex-shrink: 0;
+            object-fit: contain;
         }
 
         .sub-box h4,
@@ -242,6 +243,43 @@
             margin-bottom: 6px;
         }
 
+        .service-columns {
+            display: flex;
+            gap: 40px;
+        }
+
+        .service-col {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .expertise-group {
+            margin-bottom: 16px;
+        }
+
+        .expertise-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .expertise-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #5a6b7d;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .section-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #003366;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
@@ -252,6 +290,7 @@
         .tech-tags span {
             display: inline-flex;
             align-items: center;
+            justify-content: flex-start;
             gap: 7px;
             background: #eaf2fb;
             color: #003366;
@@ -259,6 +298,7 @@
             font-weight: 600;
             padding: 6px 12px 6px 6px;
             border-radius: 20px;
+            min-width: 160px;
         }
 
         .app-icon {
@@ -332,7 +372,8 @@
 
             .platforms,
             .services,
-            .sub-boxes {
+            .sub-boxes,
+            .service-columns {
                 flex-direction: column;
             }
 
@@ -399,36 +440,73 @@
 
             <div class="services">
                 <article class="service" style="flex: none; width: 100%;">
-                    <h3>Microsoft 365 Optimisation &amp; Solutions</h3>
-                    <p><strong>We help organisations:</strong></p>
+                    <h3 style="display: flex; align-items: center; gap: 12px;">
+                        <svg width="28" height="28" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+                            <rect x="1" y="1" width="10" height="10" fill="#f25022"/>
+                            <rect x="12" y="1" width="10" height="10" fill="#7fba00"/>
+                            <rect x="1" y="12" width="10" height="10" fill="#00a4ef"/>
+                            <rect x="12" y="12" width="10" height="10" fill="#ffb900"/>
+                        </svg>
+                        Microsoft 365 Optimisation &amp; Solutions
+                    </h3>
+                    <div class="service-columns">
+                        <div class="service-col">
+                            <span class="section-label">We Help Organisations</span>
 
-                    <ul>
-                        <li>Modern intranets and staff portals</li>
-                        <li>Centralised document libraries and information management</li>
-                        <li>Streamlined operational processes and workflows</li>
-                        <li>Automation of repetitive and manual tasks</li>
-                        <li>Improved collaboration across teams and departments</li>
-                        <li>Reporting, dashboards, and business intelligence</li>
-                        <li>Visibility, accountability, and compliance</li>
-                    </ul>
+                            <ul>
+                                <li>Modern intranets and staff portals</li>
+                                <li>Centralised document libraries and information management</li>
+                                <li>Streamlined operational processes and workflows</li>
+                                <li>Automation of repetitive and manual tasks</li>
+                                <li>Improved collaboration across teams and departments</li>
+                                <li>Reporting, dashboards, and business intelligence</li>
+                                <li>Visibility, accountability, and compliance</li>
+                            </ul>
+                        </div>
 
-                    <p><strong>Our expertise includes:</strong></p>
-                    <div class="tech-tags">
-                        <span><img src="images/teams.png" alt="Teams logo" class="app-icon">Teams</span>
-                        <span><img src="images/sharepoint.png" alt="SharePoint logo" class="app-icon">SharePoint</span>
-                        <span><img src="images/power-automate.png" alt="Power Automate logo" class="app-icon">Power Automate</span>
-                        <span><img src="images/power-apps.png" alt="Power Apps logo" class="app-icon">Power Apps</span>
-                        <span><img src="images/lists.png" alt="Lists logo" class="app-icon">Lists</span>
-                        <span><img src="images/forms.png" alt="Forms logo" class="app-icon">Forms</span>
-                        <span><img src="images/planner.png" alt="Planner logo" class="app-icon">Planner</span>
-                        <span><img src="images/power-bi.png" alt="Power BI logo" class="app-icon">Power BI</span>
-                        <span><img src="images/onedrive.png" alt="OneDrive logo" class="app-icon">OneDrive</span>
-                        <span><img src="images/outlook.png" alt="Outlook logo" class="app-icon">Outlook</span>
-                        <span><img src="images/excel.png" alt="Excel logo" class="app-icon">Excel</span>
-                        <span><img src="images/word.png" alt="Word logo" class="app-icon">Word</span>
-                        <span><img src="images/loop.png" alt="Loop logo" class="app-icon">Loop</span>
-                        <span><img src="images/bookings.png" alt="Bookings logo" class="app-icon">Bookings</span>
-                        <span><img src="images/stream.png" alt="Stream logo" class="app-icon">Stream</span>
+                        <div class="service-col">
+                            <span class="section-label">Our Expertise Includes</span>
+
+                            <div class="expertise-group">
+                                <span class="expertise-label">Core Productivity Apps</span>
+                                <div class="tech-tags">
+                                    <span><img src="images/excel.png" alt="Excel logo" class="app-icon">Excel</span>
+                                    <span><img src="images/word.png" alt="Word logo" class="app-icon">Word</span>
+                                    <span><img src="images/powerpoint.png" alt="PowerPoint logo" class="app-icon">PowerPoint</span>
+                                    <span><img src="images/outlook.png" alt="Outlook logo" class="app-icon">Outlook</span>
+                                </div>
+                            </div>
+
+                            <div class="expertise-group">
+                                <span class="expertise-label">Power Platform</span>
+                                <div class="tech-tags">
+                                    <span><img src="images/power-automate.png" alt="Power Automate logo" class="app-icon">Power Automate</span>
+                                    <span><img src="images/power-apps.png" alt="Power Apps logo" class="app-icon">Power Apps</span>
+                                    <span><img src="images/power-bi.png" alt="Power BI logo" class="app-icon">Power BI</span>
+                                </div>
+                            </div>
+
+                            <div class="expertise-group">
+                                <span class="expertise-label">Collaboration &amp; Content</span>
+                                <div class="tech-tags">
+                                    <span><img src="images/teams.png" alt="Teams logo" class="app-icon">Teams</span>
+                                    <span><img src="images/sharepoint.png" alt="SharePoint logo" class="app-icon">SharePoint</span>
+                                    <span><img src="images/onedrive.png" alt="OneDrive logo" class="app-icon">OneDrive</span>
+                                    <span><img src="images/loop.png" alt="Loop logo" class="app-icon">Loop</span>
+                                    <span><img src="images/stream.png" alt="Stream logo" class="app-icon">Stream</span>
+                                </div>
+                            </div>
+
+                            <div class="expertise-group">
+                                <span class="expertise-label">Workflow &amp; Scheduling Tools</span>
+                                <div class="tech-tags">
+                                    <span><img src="images/forms.png" alt="Forms logo" class="app-icon">Forms</span>
+                                    <span><img src="images/lists.png" alt="Lists logo" class="app-icon">Lists</span>
+                                    <span><img src="images/planner.png" alt="Planner logo" class="app-icon">Planner</span>
+                                    <span><img src="images/bookings.png" alt="Bookings logo" class="app-icon">Bookings</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -444,22 +522,18 @@
                 <article class="platform">
                     <div class="sub-box-header">
                         <img src="images/SWIM_Logo1.png" alt="SWIM logo" class="sub-box-logo">
-                        <div>
-                            <h4>SWIM</h4>
-                            <span class="sub-abbr">(Student Wellbeing Information Manager)</span>
-                        </div>
+                        <h4>SWIM</h4>
                     </div>
+                    <span class="sub-abbr">(Student Wellbeing Information Manager)</span>
                     <p>Manages student welfare, interventions, incidents, communications, and reporting in one secure environment.</p>
                 </article>
 
                 <article class="platform">
                     <div class="sub-box-header">
                         <img src="images/LeAP_Logo1.png" alt="LeAP logo" class="sub-box-logo">
-                        <div>
-                            <h4>LeAP</h4>
-                            <span class="sub-abbr">(Learning Assistance Platform)</span>
-                        </div>
+                        <h4>LeAP</h4>
                     </div>
+                    <span class="sub-abbr">(Learning Assistance Platform)</span>
                     <p>Manages learning plans, adjustments, accommodations, parent engagement, and compliance reporting.</p>
                 </article>
             </div>
@@ -470,6 +544,10 @@
 
             <p style="text-align: center;">
                 Contact Contenium Solutions to learn how our services and platforms can support your business or school.
+            </p>
+
+            <p style="text-align: center; margin-top: 8px;">
+                <a href="mailto:Info@contenium.com.au" style="color: #0077b6; font-weight: 600; text-decoration: none;">Info@contenium.com.au</a>
             </p>
         </section>
     </main>
