@@ -60,7 +60,7 @@
             position: relative;
             overflow: hidden;
             background: #C5D9F1;
-            color: #1F497D;
+            color: #ffffff;
             text-align: center;
             padding: 80px 20px;
         }
@@ -78,13 +78,13 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(
-                rgba(197, 217, 241, 0.75),
-                rgba(197, 217, 241, 0.85)
+                rgba(197, 217, 241, 0.25),
+                rgba(197, 217, 241, 0.35)
             );
             z-index: 1;
         }
 
-        .hero > * {
+        .hero > *:not(.hero-bg):not(.hero-overlay) {
             position: relative;
             z-index: 2;
         }
